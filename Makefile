@@ -35,6 +35,8 @@ build: submodule
 	cd $(BUILD_DIR) && CC=musl-gcc CFLAGS='$(CFLAGS)' ./configure $(PATH_FLAGS)
 	patch -d $(BUILD_DIR) < patches/1d8973e13d89802eee0b648451e2b97ac65cf9e0.patch
 	cd $(BUILD_DIR) && make install
+	mkdir -p $(RELEASE_DIR)/usr/share/licenses/$(PACKAGE)
+	cp $(BUILD_DIR)/COPYRIGHT $(RELEASE_DIR)/usr/share/licenses/$(PACKAGE)/LICENSE
 	cd $(RELEASE_DIR) && tar -czvf $(RELEASE_FILE) *
 
 version:
