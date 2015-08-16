@@ -31,6 +31,7 @@ build: submodule
 	mkdir -p $(DEP_DIR)/usr/include/
 	cp -R /usr/include/{linux,asm,asm-generic} $(DEP_DIR)/usr/include/
 	cp -R upstream $(BUILD_DIR)
+	patch -d $(BUILD_DIR) < patches/1d8973e13d89802eee0b648451e2b97ac65cf9e0.patch
 	cd $(BUILD_DIR) && ./autogen.sh
 	cd $(BUILD_DIR) && CC=musl-gcc CFLAGS='$(CFLAGS)' ./configure $(PATH_FLAGS)
 	cd $(BUILD_DIR) && make install
