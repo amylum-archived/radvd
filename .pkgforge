@@ -1,0 +1,29 @@
+name 'radvd'
+org 'amylum'
+
+licenses 'COPYRIGHT'
+
+deps(
+  'linux-api-headers': '4.8-rc6-2'
+)
+
+configure_flags(
+  prefix: '/usr',
+  sbindir: '/usr/bin',
+  sysconfdir: '/etc',
+  'with-pidfile': '/run/radvd.pid'
+)
+
+cflags
+harden
+
+build do
+  run './autogen.sh'
+  configure
+  make
+  install
+end
+
+test do
+  # TODO: add tests
+end
