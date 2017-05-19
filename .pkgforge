@@ -4,7 +4,7 @@ org 'amylum'
 licenses 'COPYRIGHT'
 
 deps(
-  'linux-api-headers': '4.10-1'
+  'linux-api-headers': '4.11-1'
 )
 
 configure_flags(
