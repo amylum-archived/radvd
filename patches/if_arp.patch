@@ -1,0 +1,21 @@
+diff --git a/includes.h b/includes.h
+index c528c86..eb0bbd5 100644
+--- a/includes.h
++++ b/includes.h
+@@ -86,7 +86,7 @@
+ #include <net/if_types.h>
+ #endif
+ 
+-#if defined(HAVE_NET_IF_ARP_H) && !defined(ARPHRD_ETHER) && !defined(HAVE_LINUX_IF_ARP_H)
++#if defined(HAVE_NET_IF_ARP_H) && !defined(ARPHRD_ETHER)
+ #include <net/if_arp.h>
+ #endif /* defined(HAVE_NET_IF_ARP_H) && !defined(ARPHRD_ETHER) */
+ 
+@@ -101,7 +101,3 @@
+ #ifdef HAVE_IFADDRS_H
+ #include <ifaddrs.h>
+ #endif
+-
+-#ifdef HAVE_LINUX_IF_ARP_H
+-#include <linux/if_arp.h>
+-#endif
