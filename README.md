@@ -1,7 +1,7 @@
 radvd
 ==========
 
-[![Build Status](https://img.shields.io/circleci/project/amylum/radvd/master.svg)](https://circleci.com/gh/amylum/radvd)
+[![Build Status](https://img.shields.io/travis/com/amylum/radvd.svg)](https://travis-ci.com/amylum/radvd)
 [![GitHub release](https://img.shields.io/github/release/amylum/radvd.svg)](https://github.com/amylum/radvd/releases)
 [![Inner Net Licensed](http://img.shields.io/badge/license-InnerNet-green.svg)](https://github.com/reubenhwk/radvd/blob/master/COPYRIGHT)
 
